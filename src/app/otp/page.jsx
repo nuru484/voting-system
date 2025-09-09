@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import VoterOtpPage from "./VoterOtpPage";
+import VoterOtpPage from "../../components/voters/VoterOtpPage";
 
 export default function OtpPage() {
   return (
