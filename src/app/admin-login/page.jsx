@@ -1,11 +1,13 @@
-// src/app/login/page.jsx
+import { Suspense } from "react";
 import LoginForm from "@/components/auth/login-form";
 
 export default function LoginPage() {
   return (
-    <main className="">
+    <main>
       <div>
-        <LoginForm />
+        <Suspense fallback={<div>Loading form...</div>}>
+          <LoginForm />
+        </Suspense>
       </div>
     </main>
   );
