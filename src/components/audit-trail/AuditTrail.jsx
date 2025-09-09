@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   useGetAuditTrailQuery,
   useGetElectionsQuery,
@@ -35,10 +34,7 @@ import {
 import { Users, Vote, AlertCircle, Calendar, FileText } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "react-hot-toast";
-
 export default function AuditTrail() {
-  const router = useRouter();
   const { data: userData, isLoading: isLoadingUser } = useAuthUserQuery();
   const isSuperAdmin = userData?.user?.role === "SUPER_ADMIN";
   const [selectedElectionId, setSelectedElectionId] = useState("");
